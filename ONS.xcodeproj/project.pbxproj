@@ -41,6 +41,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E4078C12B0C721F0014D960 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2E44A2122B0B945500AF6D48 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +81,7 @@
 		2E44A2322B0B94BA00AF6D48 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				2E4078C12B0C721F0014D960 /* Model */,
 				2E44A2362B0C6C6200AF6D48 /* View */,
 				2E44A2332B0B94C200AF6D48 /* ViewModel */,
 			);

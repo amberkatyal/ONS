@@ -31,7 +31,11 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel.options[indexPath.row]
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LandingTableViewCell") as! LandingTableViewCell
+        cell.titleLabel.text = item.title
+        
+        return cell
     }
 }
 

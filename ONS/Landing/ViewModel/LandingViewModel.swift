@@ -9,11 +9,17 @@ import Foundation
 
 final class LandingViewModel {
     
-    private(set) var options: [Item] = Item.items
+    private(set) var layout: Layout = .leftAligned()
+    var options: [Item] {
+        layout.options
+    }
     
-    
+    func apply() {
+        
+    }
 }
 
+// MARK: - Model
 extension LandingViewModel {
     enum ItemType: CaseIterable {
         case home
@@ -26,14 +32,38 @@ extension LandingViewModel {
     struct Item {
         let title: String
         let type: ItemType
-        
-        static let items: [Item] = [
-            Item(title: "Home", type: .home),
-            Item(title: "Directory", type: .directory),
-            Item(title: "Support", type: .support),
-            Item(title: "Follow", type: .follow),
-            Item(title: "Notifications", type: .notifications),
-        ]
     }
     
+}
+
+extension LandingViewModel {
+    
+    enum LayoutType {
+        case leftAligned
+        case centerAligned
+    }
+    
+    struct Layout {
+        let type: LayoutType
+        let options: [Item]
+        
+        static func leftAligned() -> Layout {
+            Layout(type: .leftAligned, options: [
+                Item(title: "Home", type: .home),
+                Item(title: "Directory", type: .directory),
+                Item(title: "Support", type: .support),
+                Item(title: "Follow", type: .follow),
+                Item(title: "Notifications", type: .notifications),
+            ])
+        }
+        
+        static func centerAligned() -> Layout {
+            Layout(type: .centerAligned, options: [
+                Item(title: "Home", type: .home),
+                Item(title: "Catgories", type: .directory),
+                Item(title: "FAQ", type: .follow),
+                Item(title: "Notifications", type: .notifications),
+            ])
+        }
+    }
 }
