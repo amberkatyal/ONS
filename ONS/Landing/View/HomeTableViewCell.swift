@@ -1,5 +1,5 @@
 //
-//  LandingTableViewCell.swift
+//  HomeTableViewCell.swift
 //  ONS
 //
 //  Created by Amber Katyal on 21/11/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LandingTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
