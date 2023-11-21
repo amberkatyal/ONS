@@ -18,9 +18,32 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        setupAnimationBeginState()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        performAnimation()
     }
 
 
+    // MARK: - Animations
+    private func setupAnimationBeginState() {
+        let views = [tableView]
+        views.forEach {
+            $0?.alpha = 0
+            $0?.transform = CGAffineTransform(translationX: 0, y: 10)
+        }
+    }
+    
+    private func performAnimation() {
+        guard tableView?.transform != .identity else { return }
+        let viewsAnimator = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) {
+            self.tableView.alpha = 1
+            self.tableView.transform = .identity
+        }
+        viewsAnimator.startAnimation(afterDelay: 0.5)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {

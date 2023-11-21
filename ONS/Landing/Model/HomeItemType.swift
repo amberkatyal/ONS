@@ -18,15 +18,15 @@ enum HomeItemType: CaseIterable {
     var title: String {
         switch self {
         case .home:
-            "Home"
+            String(localized: "Home")
         case .directory:
-            "Directory"
+            String(localized: "Directory")
         case .support:
-            "Support"
+            String(localized: "Support")
         case .follow:
-            "Follow"
+            String(localized: "Follow")
         case .notifications:
-            "Notifications"
+            String(localized: "Notifications")
         }
     }
 }

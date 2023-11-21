@@ -11,6 +11,7 @@
 		2E4078C52B0CB53D0014D960 /* HomeLayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4078C42B0CB53D0014D960 /* HomeLayoutType.swift */; };
 		2E4078C72B0CB60B0014D960 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4078C62B0CB60B0014D960 /* HomeTableViewCell.xib */; };
 		2E4078CA2B0CB9190014D960 /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4078C92B0CB9190014D960 /* SelfSizingTableView.swift */; };
+		2E4078CC2B0CE0310014D960 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2E4078CB2B0CE0310014D960 /* Localizable.xcstrings */; };
 		2E44A21F2B0B945600AF6D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44A21E2B0B945600AF6D48 /* AppDelegate.swift */; };
 		2E44A2212B0B945600AF6D48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44A2202B0B945600AF6D48 /* SceneDelegate.swift */; };
 		2E44A2232B0B945600AF6D48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44A2222B0B945600AF6D48 /* HomeViewController.swift */; };
@@ -26,6 +27,7 @@
 		2E4078C42B0CB53D0014D960 /* HomeLayoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLayoutType.swift; sourceTree = "<group>"; };
 		2E4078C62B0CB60B0014D960 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		2E4078C92B0CB9190014D960 /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
+		2E4078CB2B0CE0310014D960 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		2E44A21B2B0B945600AF6D48 /* ONS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ONS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E44A21E2B0B945600AF6D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E44A2202B0B945600AF6D48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		2E44A2122B0B945500AF6D48 = {
 			isa = PBXGroup;
 			children = (
+				2E4078CB2B0CE0310014D960 /* Localizable.xcstrings */,
 				2E44A21D2B0B945600AF6D48 /* ONS */,
 				2E44A21C2B0B945600AF6D48 /* Products */,
 			);
@@ -167,6 +170,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 2E44A2122B0B945500AF6D48;
 			productRefGroup = 2E44A21C2B0B945600AF6D48 /* Products */;
@@ -184,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E44A22B2B0B945700AF6D48 /* LaunchScreen.storyboard in Resources */,
+				2E4078CC2B0CE0310014D960 /* Localizable.xcstrings in Resources */,
 				2E44A2282B0B945700AF6D48 /* Assets.xcassets in Resources */,
 				2E4078C72B0CB60B0014D960 /* HomeTableViewCell.xib in Resources */,
 				2E44A2262B0B945600AF6D48 /* Main.storyboard in Resources */,
