@@ -7,12 +7,7 @@
 
 import Foundation
 
-final class LandingViewModel {
-    
-    let layout: HomeLayoutType =  .centerAligned
+final class HomeViewModel {
+    let layout =  HomeLayoutType.leftAligned
     let options = HomeItemType.allCases
-    
-    func apply() {
-        
-    }
 }

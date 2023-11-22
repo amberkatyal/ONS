@@ -8,12 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
     // MARK: - IBOutlets
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel = LandingViewModel()
+    let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

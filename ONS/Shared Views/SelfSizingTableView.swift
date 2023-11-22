@@ -38,9 +38,10 @@ class SelfSizingTableView: UITableView {
         
         while view != nil {
             view?.invalidateIntrinsicContentSize()
-            if let tableView = view as? UITableView {
+            if view is UITableView {
                 break
             }
+            
             view = view?.superview
         }
     }
