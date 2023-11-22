@@ -62,6 +62,12 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        switch viewModel.options[indexPath.row] {
+        case .notifications:
+            let vc = NotificationsListViewController()
+            let nc = UINavigationController(rootViewController: vc)
+            present(nc, animated: true)
+        default: break
+        }
     }
 }
