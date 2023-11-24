@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Right Aligned Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RightAlignedHomeViewController" id="Y6W-OH-hqX" customClass="RightAlignedHomeViewController" customModule="ONS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing_background" translatesAutoresizingMaskIntoConstraints="NO" id="fLn-xR-bx6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xlc-kp-Vig">
+                                <rect key="frame" x="293" y="59" width="100" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="m2O-vQ-fsQ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Rj-BM-FAD">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="2Rz-4g-4c4"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="PXP-RW-Uve"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fLn-xR-bx6" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="2Fh-aJ-5DA"/>
+                            <constraint firstItem="fLn-xR-bx6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Kx0-Ni-X8K"/>
+                            <constraint firstItem="xlc-kp-Vig" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="di4-ey-P1F"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xlc-kp-Vig" secondAttribute="trailing" id="iZG-t0-DBS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xlc-kp-Vig" secondAttribute="bottom" id="lLl-PI-Qft"/>
+                            <constraint firstAttribute="bottom" secondItem="fLn-xR-bx6" secondAttribute="bottom" id="sPz-br-JOW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fLn-xR-bx6" secondAttribute="trailing" id="zVI-FX-lin"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="fLn-xR-bx6" id="4eN-A9-b7n"/>
+                        <outlet property="collectionView" destination="xlc-kp-Vig" id="WoN-ov-CsB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="landing_background" width="1920" height="2880"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

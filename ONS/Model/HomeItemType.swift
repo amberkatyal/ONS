@@ -31,4 +31,8 @@ enum HomeItemType: CaseIterable {
         
         return String(localized: LocalizedStringResource(stringLiteral: key))
     }
+    
+    var image: String {
+        return "figure.surfing"
+    }
 }

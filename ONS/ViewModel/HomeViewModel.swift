@@ -8,6 +8,15 @@
 import Foundation
 
 final class HomeViewModel {
-    let layout =  HomeLayoutType.leftAligned
+    private var _layout =  HomeLayoutType.leftAligned
     let options = HomeItemType.allCases
+    
+    var layout: HomeLayoutType {
+        get {
+            return _layout
+        }
+        set {
+            _layout = newValue
+        }
+    }
 }

@@ -63,6 +63,13 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch viewModel.options[indexPath.row] {
+        case .directory:
+            let vc = RightAlignedHomeViewController.makeRightAlignedHomeViewController()
+            let nc = UINavigationController(rootViewController: vc)
+            nc.setNavigationBarHidden(true, animated: false)
+            nc.modalPresentationStyle = .fullScreen
+            nc.modalTransitionStyle = .coverVertical
+            present(nc, animated: true)
         case .notifications:
             let vc = NotificationsListViewController()
             let nc = UINavigationController(rootViewController: vc)

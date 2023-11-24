@@ -10,4 +10,5 @@ import Foundation
 enum HomeLayoutType {
     case leftAligned
     case centerAligned
+    case rightAligned
 }
